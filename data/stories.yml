@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ondc path
+  steps:
+    - intent: about_ondc
+    - action: utter_ondc
+
+- story: search products
+  steps:
+    - intent: search_product
+    - action: link_find
+
+- story: find retailer
+  steps:
+    - intent: find_ret
+    - action: find_ret
+
+- story: shopping cart
+  steps:
+    - intent: open_cart
+    - action: utter_acc
+    - action: utter_cart
+
+- story: orders
+  steps:
+    - intent: order_check
+    - action: utter_acc
+    - action: utter_order
+

@@ -1,0 +1,96 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - about_ondc
+  - search_product
+  - find_ret
+  - open_cart
+  - check_order
+
+entities:
+  - prod_name
+  - user_text
+
+
+slots:
+  user_text:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        intent: search_product
+
+
+  ret_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        intent: find_ret
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, let us move on with your shopping experience!"
+
+  utter_goodbye:
+  - text: "Bye. Please shop with us again"
+  - text: "goodbye. We hope you will consider us for your next shopping experience"
+
+  utter_iamabot:
+  - text: "I am an e-commerce bot, powered by Rasa. Please ensure that you have a Mystore account and autologin to Mystore
+  enabled on your default Google Chrome profile."
+
+  utter_ondc:
+  - text: "ONDC is an interoperable network based on the BeckN protocol that
+           anyone can piggyback on. It seeks to break down silos in digital commerce by
+           enabling platforms of varying configurations (big or small) to connect
+            and operate seamlessly on it.\n Below is the link of the ONDC website: \n
+            https://www.ondc.org/"
+
+
+  utter_search:
+    - text: "NOTE: - To search for a product, type \"I want <product name>\".\nTo search for a retailer, type \"
+    Tell me about <retailer name>\"\nHere are your search results {search}"
+
+
+  utter_acc:
+    - text: "Please ensure that you have a Mystore account and are logged using your default browser. If not, please go
+     to https://www.mystore.in/en/user/login"
+
+  utter_cart:
+    - text: " If you are logged in, follow this link to your shopping cart - https://www.mystore.in/en/cart"
+
+  utter_order:
+    - text: "If you are logged in, view your order here https://www.mystore.in/en/account/orders"
+
+
+
+
+
+actions:
+  - link_find
+  - find_ret
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

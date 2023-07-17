@@ -1,0 +1,151 @@
+version: "3.1"
+
+nlu:
+
+- synonym: ondc
+  examples: |
+    - ONDC
+    - Open Network for Digital Commerce
+
+- synonym: cart
+  examples: |
+    - shopping cart
+    - checkout cart
+    - mystore cart
+    - ondc cart
+    
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - What is your function?
+
+- intent: about_ondc
+  examples: |
+   - tell me more about ondc
+   - I want to know more about ondc
+   - what is ondc?
+   - what is the ful form of ondc?
+   - tell me the full form of ondc
+
+- intent: search_product
+  examples: |
+    - I want [Heinz ketchup](prod_name)
+    - I want to order [olive oil](prod_name)
+    - please order some [cadbury chocolates](prod_name) for me
+    - I want to add [Funfoods pizza topping](prod_name) to my cart
+    - add [greek yoghurt](prod_name) to my cart
+    - I want [ketchup](prod_name)
+    - please order a [chocolate](prod_name) for me
+    - I want [noodles](prod_name)
+    - I want to order some [oregano](prod_name)
+    - I want [Amul milk](prod_name)
+    - please order some [tea](prod_name) for me
+
+- intent: find_ret
+  examples: |
+    - Tell me about [](prod_name)
+    - I want the product catalogue of [](prod_name)
+    - give me some information about [](prod_name)
+
+- intent: open_cart
+  examples: |
+    - I want to place an order for all items in my cart.
+    - I want to view my cart
+    - show me my shopping cart
+    - Place an order for all items in my cart
+
+- intent: order_check
+  examples: |
+    - I want to view my current order
+    - I want to cancel my order
+    - I want to check delivery progress of my order
+    - How much time will my order take to arrive?
+  
+
+
