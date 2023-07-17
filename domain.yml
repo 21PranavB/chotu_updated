@@ -12,7 +12,7 @@ intents:
   - search_product
   - find_ret
   - open_cart
-  - check_order
+  - order_check
 
 entities:
   - prod_name
