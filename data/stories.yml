@@ -44,6 +44,11 @@ stories:
     - intent: find_ret
     - action: find_ret
 
+- story: make complaint
+  steps: 
+    - intent: make_complaint
+    - action: utter_complaint
+
 - story: shopping cart
   steps:
     - intent: open_cart

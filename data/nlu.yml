@@ -133,6 +133,10 @@ nlu:
     - I want the product catalogue of [](prod_name)
     - give me some information about [](prod_name)
 
+- intent: make_complaint
+  examples: |
+    - I want to make a complaint about [](ret_name)
+
 - intent: open_cart
   examples: |
     - I want to place an order for all items in my cart.
