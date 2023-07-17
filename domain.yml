@@ -11,6 +11,7 @@ intents:
   - about_ondc
   - search_product
   - find_ret
+  - make_complaint
   - open_cart
   - order_check
 
@@ -69,7 +70,7 @@ responses:
 
   utter_search:
     - text: "NOTE: - To search for a product, type \"I want <product name>\".\nTo search for a retailer, type \"
-    Tell me about <retailer name>\"\nHere are your search results {search}"
+  Tell me about <retailer name>\"\nHere are your search results {search}"
 
 
   utter_acc:
@@ -82,7 +83,8 @@ responses:
   utter_order:
     - text: "If you are logged in, view your order here https://www.mystore.in/en/account/orders"
 
-
+  utter_complaint:
+    - text: "You may lodge your complaint at https://consumercomplaintscourt.com/tag/ondc/"
 
 
 
